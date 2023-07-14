@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>21期生メールアドレス</title>
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="design">
+     <header>Email address</header>
+    <center>
+      <div class="parent">
+        <p class="description">メアドのクラスと出席番号を入力</p>
+        <form id="form1" action="#">
+          <input type="text" placeholder="例:a01" id="input-message">
+          <input type="button" id="copyButton" onclick="showMessage()" value="Copy">
+        </form>
+        <p id="output-message"></p>
+        <div id="message"></div>
+      </div>
+      <p></p>
+   </center>
+  </div>
+  <style type="text/css">
+    body {
+      padding:0;
+      margin:0;
+    }
+    header {
+      background-color:black;
+      color:white;
+      padding:10 0;
+    }
+    .design form input {
+      width: 80%;
+      padding: 10px;
+    }
+    .parent {
+      padding-top:230px;
+    }
+    .description {
+      font-size: 30px;
+    }
+    p {color:white;}
+    #message {color: white;}
+  </style>
+ <script language="javascript" type="text/javascript">
+  const showMessage = () => {
+     const textbox = document.getElementById("input-message");
+     const inputValue = textbox.value;
+     //テキストボックスの値を使って、出力するメッセージを生成する
+     const output = "812221b" + inputValue + "@gse.okayama-c.ed.jp";
+     //出力用のp要素にメッセージを表示
+     document.getElementById("output-message").innerHTML = output;
+     navigator.clipboard.writeText(output)
+     message.textContent = "コピーしました";
+  setTimeout(function() {
+    message.textContent = "";
+  }, 1000);
+    }
+  </script>
+</body>
+</html>
